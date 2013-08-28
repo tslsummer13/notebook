@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notebook</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container" class="notepad">
+    <header>
+      <div id="theme_links">
+        <%= link_to 'Legal Pad', '#', :id => 'legalpad_link' %>
+        |
+        <%= link_to "Notepad", '#', :id => 'notepad_link' %>
+      </div>
+      <h1>
+        <%= link_to image_tag('bulb.jpg', :size => '75x100'), root_url %>
+        <%= link_to 'Aha! Notebook', root_url %>
+      </h1>
+    </header>
+    <section>
+      <%= yield %>
+    </section>
+  </div>
+</body>
+</html>
