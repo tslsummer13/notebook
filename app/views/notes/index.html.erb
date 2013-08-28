@@ -3,8 +3,6 @@
     <%= render 'note', :note => the_note %>
   <% end %>
   <li>
-    <%= form_for Note.new do |f| %>
-      <%= f.text_field :content, placeholder: 'Add a new note' %>
-    <% end %>
+    <%= # Render a form for a new note using the _embedded_form partial %>
   </li>
 </ul>
