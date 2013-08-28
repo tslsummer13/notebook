@@ -58,6 +58,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to notes_url }
       format.json { head :no_content }
+      format.js
     end
   end
 

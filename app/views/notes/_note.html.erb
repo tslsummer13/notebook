@@ -2,6 +2,6 @@
   <%= note.content %>
   <div>
     <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_note_path(note) %>
-    <%= link_to '<i class="icon-trash"></i>'.html_safe, note, method: :delete %>
+    <%= link_to '<i class="icon-trash"></i>'.html_safe, note, method: :delete, remote: true %>
   </div>
 </li>
