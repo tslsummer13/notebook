@@ -1,27 +1,15 @@
-<h1>Listing notes</h1>
+<ul>
+  <% @notes.each do |note| %>
+    <li>
+      <%= note.content %>
+      <div>
+        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_note_path(note) %>
+        <%= link_to '<i class="icon-trash"></i>'.html_safe, note, method: :delete %>
+      </div>
+    </li>
+  <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @notes.each do |note| %>
-      <tr>
-        <td><%= note.content %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Note', new_note_path %>
+  <li>
+    <input placeholder="Add a new aha! here" size="50">
+  </li>
+</ul>
