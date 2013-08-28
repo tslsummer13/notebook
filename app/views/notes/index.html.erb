@@ -1,12 +1,6 @@
 <ul>
-  <% @notes.each do |note| %>
-    <li>
-      <%= note.content %>
-      <div>
-        <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_note_path(note) %>
-        <%= link_to '<i class="icon-trash"></i>'.html_safe, note, method: :delete %>
-      </div>
-    </li>
+  <% @notes.each do |the_note| %>
+    <%= render 'note', :note => the_note %>
   <% end %>
   <li>
     <%= form_for Note.new do |f| %>
