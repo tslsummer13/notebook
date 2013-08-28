@@ -3,6 +3,6 @@
     <%= render 'note', :note => the_note %>
   <% end %>
   <li>
-    <%= # Render a form for a new note using the _embedded_form partial %>
+    <%= render 'embedded_form', :note => Note.new %>
   </li>
 </ul>
