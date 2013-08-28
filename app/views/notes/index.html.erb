@@ -8,8 +8,9 @@
       </div>
     </li>
   <% end %>
-
   <li>
-    <input placeholder="Add a new aha! here" size="50">
+    <%= form_for Note.new do |f| %>
+      <%= f.text_field :content, placeholder: 'Add a new note' %>
+    <% end %>
   </li>
 </ul>
