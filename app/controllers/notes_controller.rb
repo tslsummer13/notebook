@@ -38,6 +38,7 @@ class NotesController < ApplicationController
       else
         format.html { render action: 'new' }
         format.json { render json: @note.errors, status: :unprocessable_entity }
+        format.js { render js: 'alert("Cannot be blank");' }
       end
     end
   end
