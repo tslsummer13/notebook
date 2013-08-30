@@ -1,4 +1,4 @@
-<li id="note_<%= note.id %>">
+<li id="note_<%= note.id %>" class="note">
   <%= note.content %>
   <div>
     <%= link_to '<i class="icon-edit"></i>'.html_safe, edit_note_path(note), remote: true %>

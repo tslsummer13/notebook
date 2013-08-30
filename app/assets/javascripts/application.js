@@ -11,7 +11,31 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require turbolinks
 //= require private_pub
 //= require_tree .
+
+$(document).ready(function() {
+  $('.note').draggable();
+
+  $('#trash').droppable({
+      drop: function( event, ui ) {
+        ui.draggable.fadeOut();
+      }
+   });
+
+  $('#date').datepicker();
+});
+
+
+
+
+
+
+
+
+
+
+
