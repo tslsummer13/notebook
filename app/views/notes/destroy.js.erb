@@ -1,1 +1,3 @@
-$('#note_<%= @note.id %>').slideUp();
+<% publish_to "/notes/destroy" do %>
+  $('#note_<%= @note.id %>').slideUp();
+<% end %>

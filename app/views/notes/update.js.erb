@@ -1,1 +1,3 @@
-$('#note_<%= @note.id %>').replaceWith('<%= escape_javascript(render 'note', :note => @note) %>');
+<% publish_to "/notes/update" do %>
+  $('#note_<%= @note.id %>').replaceWith('<%= escape_javascript(render 'note', :note => @note) %>');
+<% end %>
