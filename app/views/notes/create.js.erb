@@ -1,2 +1,5 @@
-$('#new_note').parent().before('<%= escape_javascript(render 'note', :note => @note) %>');
+<% publish_to "/notes" do %>
+  $('#new_note').parent().before('<%= escape_javascript(render 'note', :note => @note) %>');
+<% end %>
+
 $('#new_note #note_content').val('');
