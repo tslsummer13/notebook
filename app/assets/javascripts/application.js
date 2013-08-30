@@ -23,6 +23,11 @@ $(document).ready(function() {
   $('#trash').droppable({
       drop: function( event, ui ) {
         ui.draggable.fadeOut();
+        $.ajax({
+          url: "/notes/" + ui.draggable.data("note-id"),
+          type: "delete",
+          dataType: 'script'
+        });
       }
    });
 
