@@ -1,2 +1,2 @@
-$('#embedded_form').before('<%= escape_javascript(render 'note', :note => @note) %>');
-$('#note_content').val('');
+$('#new_note').parent().before('<%= escape_javascript(render 'note', :note => @note) %>');
+$('#new_note #note_content').val('');

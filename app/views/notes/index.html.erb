@@ -2,7 +2,7 @@
   <% @notes.each do |the_note| %>
     <%= render 'note', :note => the_note %>
   <% end %>
-  <li id="embedded_form">
+  <li>
     <%= render 'embedded_form', :note => Note.new %>
   </li>
 </ul>
